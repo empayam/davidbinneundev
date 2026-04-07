@@ -1,0 +1,9 @@
+title,provider,description,certificate_link,certificate_pdf,technologies,months,order,id,created_date,updated_date,created_by_id,created_by,is_sample
+"CyberGO","Mamram Alumni Association","SOC Analyst Training Program
+Network, OS and server infrastructure
+Identifying common vulnerabllities
+SIEM operation and log analysis","","https://base44.app/api/apps/692efed96cc38b3e9aa87653/files/public/692efed96cc38b3e9aa87653/cb7364e52_CyberGoCertificate.png","[""Splunk"",""Firewalls"",""Scripting"",""Docker"",""Burp Suite"",""Bash"",""Linux"",""Application Security"",""Active Directory"",""SOC"",""Fortinet"",""Packet Tracer"",""Wireshark"",""Log Analysis""]","3","0","692efffa358eb7504ef47577","2025-12-02T15:04:26.138000","2025-12-03T07:36:30.006000","692efed96cc38b3e9aa87654","davidbinneun@gmail.com","false"
+"Cyber4s","Start-Up Nation Central","Full-Stack Development Program
+Intensive hands-on bootcamp
+Emphasis on secure coding on relevant platforms
+Mentored by senior developers from top companies","https://www.credly.com/badges/6c84b85c-1f69-46ec-a174-db958d861165","https://base44.app/api/apps/692efed96cc38b3e9aa87653/files/public/692efed96cc38b3e9aa87653/9f93a5ada_Cyber4sCertificate.png","[""Node.js"",""React"",""JavaScript"",""TypeScript"",""HTML"",""CSS"",""MongoDB"",""SQL"",""Git"",""AWS"",""Docker"",""Postman""]","6","0","692efffa358eb7504ef47576","2025-12-02T15:04:26.138000","2025-12-03T07:44:16.879000","692efed96cc38b3e9aa87654","davidbinneun@gmail.com","false"
