@@ -50,6 +50,9 @@ const appRoot = path.resolve(serverDir, "..");
 const uploadsDir = process.env.UPLOADS_DIR || path.join(appRoot, "uploads");
 const publicBaseUrl = process.env.PUBLIC_BASE_URL || "";
 const port = Number(process.env.PORT || 3001);
+const secureCookies =
+  process.env.COOKIE_SECURE === "true" ||
+  publicBaseUrl.startsWith("https://");
 
 mkdirSync(uploadsDir, { recursive: true });
 getDatabase();
@@ -224,7 +227,7 @@ app.post("/api/auth/register", (req, res) => {
   res.cookie(SESSION_COOKIE_NAME, token, {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: secureCookies,
     maxAge: 1000 * 60 * 60 * 24 * 30,
     path: "/",
   });
@@ -246,7 +249,7 @@ app.post("/api/auth/login", (req, res) => {
   res.cookie(SESSION_COOKIE_NAME, token, {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: secureCookies,
     maxAge: 1000 * 60 * 60 * 24 * 30,
     path: "/",
   });
@@ -258,7 +261,7 @@ app.post("/api/auth/logout", (_req, res) => {
   res.clearCookie(SESSION_COOKIE_NAME, {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: secureCookies,
     path: "/",
   });
   res.status(204).end();
